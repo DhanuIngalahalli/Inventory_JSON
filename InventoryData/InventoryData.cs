@@ -26,14 +26,14 @@ namespace JSON
             //perfroming serialization on inventoryList
             string json = JsonConvert.SerializeObject(inventoryList);
             //json string save to print.json
-            File.WriteAllText(@"C:\Users\pooja\Desktop\New folder\print.json", json);
+            File.WriteAllText(@"C:\Users\pooja\Desktop\New folder\InventoryData\print.json", json);
 
             Console.WriteLine("Data Stored to print.json");
             Console.WriteLine("\n");
             Console.WriteLine("Dispaly Inventory Data");
 
             //perfroming deserialization on print.json
-            string datafile = File.ReadAllText(@"C:\Users\pooja\Desktop\New folder\print.json");
+            string datafile = File.ReadAllText(@"C:\Users\pooja\Desktop\New folder\InventoryData\print.json");
             //to print string datafile
             List<Library> returnDataObj = JsonConvert.DeserializeObject<List<Library>>(datafile);
 
